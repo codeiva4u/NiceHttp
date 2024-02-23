@@ -54,12 +54,12 @@ class MainActivity : AppCompatActivity() {
             val requests = Requests(responseParser = parser)
 
             // Example for query selector
-            val doc = requests.get("https://github.com/Blatzar/NiceHttp").document
+            val doc = requests.get("https://github.com/codeiva4u/NiceHttp").document
             println("Selector description: ${doc.select("p.f4.my-3").text()}")
 
             // Example for json Parser
             val json =
-                requests.get("https://api.github.com/repos/blatzar/nicehttp")
+                requests.get("https://api.github.com/repos/codeiva4u/nicehttp")
                     .parsed<GithubJson>()
             println("JSON description: ${json.description}")
 
